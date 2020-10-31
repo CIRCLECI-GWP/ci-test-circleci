@@ -49,3 +49,9 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+
+$routes->get('posts', 'Post::index');
+$routes->post('post', 'Post::create');
+$routes->get('post/(:num)', 'Post::show/$1');
+$routes->post('post/(:num)', 'Post::update/$1');
+$routes->delete('post/(:num)', 'Post::delete/$1');
