@@ -68,4 +68,4 @@ jobs:
             sudo echo "database.default.password = rootpw" >> .env
             sudo echo "database.default.DBDriver = MySQLi" >> .env
 
-      - run: ./vendor/bin/phpunit tests/Controllers
+      - run: phpdbg -qrr ./vendor/bin/phpunit tests/Controllers
